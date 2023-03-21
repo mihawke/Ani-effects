@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+h1{
+    color: white;
+    font-family: 'Space Mono', monospace;
+}
+
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+}
+
+h1 > .magic{
+    animation: background-pan 3s  linear infinite;
+    background: radial-gradient(circle, #fc5c7d 0%, #6a82fb 100%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
